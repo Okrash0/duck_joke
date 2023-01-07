@@ -2,26 +2,31 @@
 <head>
   <style>
     h1 {
-      font-family: Arial, sans-serif;
-      color: #0066ff;
       text-align: center;
+      color: darkorange;
     }
-    
     button {
-      font-family: Arial, sans-serif;
       font-size: 16px;
-      background-color: #0066ff;
-      color: white;
-      border: none;
       padding: 8px 16px;
-      border-radius: 4px;
+      border: none;
+      background-color: darkorange;
+      color: white;
       cursor: pointer;
+      border-radius: 4px;
     }
-    
+    button:hover {
+      background-color: orange;
+    }
     p {
-      font-family: Arial, sans-serif;
       font-size: 16px;
+      margin: 16px;
       text-align: center;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 256px;
+      height: 256px;
     }
   </style>
 </head>
@@ -33,4 +38,22 @@
 
 <p id="joke"></p>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Anas_platyrhynchos_male_female_quadrat.jpg/280px-Anas_platyrhynchos_male_female_quadrat.jpg" alt="Duck" style="display: block; margin: 0 auto; width
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Parrulo_-Muscovy_duckling.jpg/1280px-Parrulo_-Muscovy_duckling.jpg" alt="Duck">
+
+<script>
+  const jokes = [
+    "Why was the duck kicked out of the bar? It was trying to quack up the place!",
+    "What did the duck say when it bought lipstick? Put it on my bill!",
+    "Why did the duck go to outer space? To find the final quack-on!",
+    "Why was the duck kicked out of the soccer game? Because it kept trying to duck, duck, goose the players!",
+    "Why couldn't the duck play music? It was tone deaf!"
+  ];
+  
+  function generateJoke() {
+    const index = Math.floor(Math.random() * jokes.length);
+    document.getElementById("joke").innerHTML = jokes[index];
+  }
+</script>
+
+</body>
+</html>
